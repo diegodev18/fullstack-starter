@@ -3,10 +3,18 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"API,WEB\" -c \"blue,magenta\" \"bun --filter './apps/api' dev\" \"bun --filter './apps/web' dev\""
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "concurrently": "^9.2.1"
   },
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
