@@ -1,0 +1,39 @@
+@theme {
+  --default-transition-duration: 0.3s;
+  --default-transition-timing-function: ease-in-out;
+  --default-transition-delay: 0s;
+  --default-transition-property: all;
+
+  --font-sans:
+    Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono:
+    "Geist Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
